@@ -23,12 +23,15 @@ A modern, responsive web application that provides random book recommendations b
    git clone [https://github.com/your-username/book-finder.git](https://github.com/your-username/book-finder.git)
    cd book-finder
 2. **Configure Environment**
+   
    Create a file named .env in the root directory and add your desired port:
    ```bash
    PORT=3000
-3. **Run the application**
+4. **Run the application**
+   
    Start the server using Node.js:
    ```bash
    node index.js
-4. **Access the site**
+6. **Access the site**
+   
    Open your browser and navigate to: http://localhost:3000
