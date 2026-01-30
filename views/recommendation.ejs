@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Recommendation | BookFinder</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div class="hero">
+        <h1 class="main-title">Your<br>Pick</h1>
+
+        <div class="search-section">
+            <a href="/" class="back-link">← Change Genre</a>
+            <p class="subtitle">Based on your interest in <strong><%= genre %></strong>:</p>
+        </div>
+
+        <% if (book) { %>
+            <div class="result-container">
+                <div class="book-card-display">
+                    <div class="book-cover-large">
+                        <% if (book.cover_i) { %>
+                            <img src="https://covers.openlibrary.org/b/id/<%= book.cover_i %>-L.jpg" alt="<%= book.title %>">
+                        <% } else { %>
+                            <div class="no-cover-placeholder">
+                                <span>No Cover<br>Available</span>
+                            </div>
+                        <% } %>
+                    </div>
+                    
+                    <div class="book-details-content">
+                        <span class="genre-tag"><%= genre %></span>
+                        <h2><%= book.title %></h2>
+                        <p class="author-name">by <%= book.author_name ? book.author_name.join(', ') : 'Unknown Author' %></p>
+                        
+                        <div class="book-meta">
+                            <p><strong>First Published:</strong> <%= book.first_publish_year || 'N/A' %></p>
+                        </div>
+
+                        <div class="action-buttons">
+                            <button onclick="window.location.reload()" class="btn-refresh">
+                                🎲 Try Another One
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <% } else { %>
+            <div class="error-container">
+                <h2>Opps!</h2>
+                <p>We couldn't find a random book for this category right now.</p>
+                <a href="/" class="btn-main">Go Back</a>
+            </div>
+        <% } %>
+    </div>
+
+    <%- include('partials/footer') %>
+</body>
+</html>

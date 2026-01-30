@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Finder</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div class="hero">
+        <h1 class="main-title">Book<br>Finder</h1>
+
+        <div class="search-section">
+            <div class="search-bar">
+                <input type="text" placeholder="What kind of book would you like?" disabled>
+                <span class="search-icon">🔍</span>
+            </div>
+            <p class="subtitle">Pick a genre and we'll find a perfect match for you.</p>
+        </div>
+
+        <div class="genre-grid">
+            <a href="/recommend?genre=romance" class="genre-item">
+                <img src="/images/romance.png" alt="Romance">
+                <span class="genre-label">Romance</span>
+            </a>
+
+            <a href="/recommend?genre=poetry" class="genre-item">
+                <img src="/images/poetry.png" alt="Poetry">
+                <span class="genre-label">Poetry</span>
+            </a>
+
+            <a href="/recommend?genre=fantasy" class="genre-item">
+                <img src="/images/fantasy.png" alt="Fantasy">
+                <span class="genre-label">Fantasy</span>
+            </a>
+
+            <a href="/recommend?genre=horror" class="genre-item">
+                <img src="/images/horror.png" alt="Horror">
+                <span class="genre-label">Horror</span>
+            </a>
+
+            <a href="/recommend?genre=science_fiction" class="genre-item">
+                <img src="/images/scifi.png" alt="Sci-Fi">
+                <span class="genre-label">Sci-Fi</span>
+            </a>
+
+            <a href="/recommend?genre=history" class="genre-item">
+                <img src="/images/history.png" alt="History">
+                <span class="genre-label">History</span>
+            </a>
+
+            <a href="/recommend?genre=mystery" class="genre-item">
+                <img src="/images/mystery.png" alt="Mystery">
+                <span class="genre-label">Mystery</span>
+            </a>
+
+            <a href="/recommend?genre=art" class="genre-item">
+                <img src="/images/art.png" alt="Art">
+                <span class="genre-label">Art</span>
+            </a>
+        </div>
+        
+    </div>
+
+    <%- include('partials/footer') %>
+</body>
+</html>
